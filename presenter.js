@@ -1,5 +1,7 @@
+import { model } from './model.js';
+
 export const presenter = {
   init: function() {
-    console.log('Hello World!');
+    console.log(model.getCount());
   }
 };
