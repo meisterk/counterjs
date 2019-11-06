@@ -1,15 +1,19 @@
 export const model = {
-  count: 0,
+  _count: 0,
+
   increment: function() {
-    this.count++;
+    this._count++;
   },
+
   decrement: function() {
-    this.count--;
+    this._count--;
   },
+
   reset: function() {
-    this.count = 0;
+    this._count = 0;
   },
+
   getCount: function() {
-    return this.count;
+    return this._count;
   }
 };
