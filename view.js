@@ -4,20 +4,20 @@ export const view = {
   init: function() {
     // HTML elements
     this._outputNode = document.getElementById('output');
-    this.incrementButton = document.getElementById('increment');
-    this.decrementButton = document.getElementById('decrement');
-    this.resetButton = document.getElementById('reset');
+    this._incrementButton = document.getElementById('increment');
+    this._decrementButton = document.getElementById('decrement');
+    this._resetButton = document.getElementById('reset');
 
     // Delegate events to presenter
-    this.incrementButton.addEventListener('click', function() {
+    this._incrementButton.addEventListener('click', function() {
       presenter.incrementButtonClicked();
     });
 
-    this.decrementButton.addEventListener('click', function() {
+    this._decrementButton.addEventListener('click', function() {
       presenter.decrementButtonClicked();
     });
 
-    this.resetButton.addEventListener('click', function() {
+    this._resetButton.addEventListener('click', function() {
       presenter.resetButtonClicked();
     });
   },
