@@ -1,19 +1,21 @@
-export const model = {
-  _count: 0,
-
-  increment: function() {
-    this._count++;
-  },
-
-  decrement: function() {
-    this._count--;
-  },
-
-  reset: function() {
-    this._count = 0;
-  },
-
-  getCount: function() {
-    return this._count;
+export class Model {
+  constructor(count) {
+    this.count = count;
   }
-};
+
+  increment() {
+    this.count++;
+  }
+
+  decrement() {
+    this.count--;
+  }
+
+  reset() {
+    this.count = 0;
+  }
+
+  getCount() {
+    return this.count;
+  }
+}

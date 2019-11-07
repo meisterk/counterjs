@@ -1,28 +1,29 @@
-import { model } from './model.js';
+import { Model } from './model.js';
 import { view } from './view.js';
 
 export const presenter = {
   init: function() {
+    this.model = new Model(5);
     view.init();
-    const count = model.getCount();
+    const count = this.model.getCount();
     view.displayCount(count);
   },
 
   incrementButtonClicked: function() {
-    model.increment();
-    const count = model.getCount();
+    this.model.increment();
+    const count = this.model.getCount();
     view.displayCount(count);
   },
 
   decrementButtonClicked: function() {
-    model.decrement();
-    const count = model.getCount();
+    this.model.decrement();
+    const count = this.model.getCount();
     view.displayCount(count);
   },
 
   resetButtonClicked: function() {
-    model.reset();
-    const count = model.getCount();
+    this.model.reset();
+    const count = this.model.getCount();
     view.displayCount(count);
   }
 };
