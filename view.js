@@ -2,13 +2,18 @@ import { Presenter } from './presenter.js';
 
 export class View {
   constructor(presenter) {
-    // HTML elements
+    this._getHTMLelements();
+    this._delegateEventsToPresenter(presenter);
+  }
+
+  _getHTMLelements() {
     this._outputNode = document.getElementById('output');
     this._incrementButton = document.getElementById('increment');
     this._decrementButton = document.getElementById('decrement');
     this._resetButton = document.getElementById('reset');
+  }
 
-    // Delegate events to presenter
+  _delegateEventsToPresenter(presenter) {
     this._incrementButton.addEventListener('click', function() {
       presenter.incrementButtonClicked();
     });
