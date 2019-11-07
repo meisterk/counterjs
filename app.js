@@ -1,2 +1,2 @@
-import { presenter } from './presenter.js';
-presenter.init();
+import { Presenter } from './presenter.js';
+new Presenter();

@@ -1,7 +1,7 @@
-import { presenter } from './presenter.js';
+import { Presenter } from './presenter.js';
 
-export const view = {
-  init: function() {
+export class View {
+  constructor(presenter) {
     // HTML elements
     this._outputNode = document.getElementById('output');
     this._incrementButton = document.getElementById('increment');
@@ -20,9 +20,9 @@ export const view = {
     this._resetButton.addEventListener('click', function() {
       presenter.resetButtonClicked();
     });
-  },
+  }
 
-  displayCount: function(count) {
+  displayCount(count) {
     this._outputNode.innerHTML = count;
   }
-};
+}
